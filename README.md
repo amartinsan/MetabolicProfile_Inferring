@@ -1,3 +1,14 @@
+
+Generate a pipeline to proceess metagenome samples 
+
+Maybe all scripts in a Docker container app or a process in nextflow or even snakemake
+
+
+
+![Plot](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Diagram.png)
+
+
+
 # List of program  needed
 
 - fastp https://github.com/OpenGene/fastp
