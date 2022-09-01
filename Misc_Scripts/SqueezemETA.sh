@@ -9,7 +9,7 @@ source PATH=/share/apps/SqueezeMeta/bin/:$PATH
 SqueezeMeta.pl \
 -m coassembly \
 -c 1000 \
--p D18_SED_CORE \
+-p FOLDER_OUT_NAME \
 -s sample.file \
 -f /fastafile/PATH/ \
 -t $NSLOTS \
