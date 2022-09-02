@@ -1,9 +1,14 @@
 ###INSTALL ALL DEPENDENCIES AND NEEDED PROGRAMS IN ONE CONTAINER
 FROM continuumio/miniconda
 
-#INSTALL fastp, mehagit and conda programs
+#INSTALL fastp, mehagit, diamond and conda programs
 RUN conda install -c bioconda fastp --yes
 RUN conda install -c bioconda megahit --yes
+RUN conda install -c bioconda diamond -yes 
+RUN conda install -c bioconda hmmer --yes 
+
+## For diamond it can be pulled from docker
+#docker pull buchfink/diamond
 
 #INSTALL metaspades
 
@@ -20,5 +25,3 @@ cd bin && \
 for f in `ls *-linux`; do
   mv $f `basename $f -linux`
 done
-
-##INSTALL diamond
