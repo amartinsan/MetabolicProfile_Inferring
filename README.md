@@ -1,7 +1,11 @@
 
 ## Generate a pipeline to proceess metagenome samples 
 
+Make a dokcer container with all programs.
 
+And both nextflow main.nf and nextflow.config.
+
+## Workflow diagram
 
 
 ![Plot](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Diagram.png)
