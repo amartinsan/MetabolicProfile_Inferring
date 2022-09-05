@@ -8,7 +8,7 @@ And both nextflow main.nf and nextflow.config.
 ## Workflow diagram
 
 
-![Plot](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Diagram.png)
+![Plot]()
 
 
 
