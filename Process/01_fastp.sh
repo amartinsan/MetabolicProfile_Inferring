@@ -38,4 +38,9 @@ do
 
 done
 
+mkdir quality
+mv Sample_soil_R* quality/
+mv *clstr quality/
+
+
 #Final
