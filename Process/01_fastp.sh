@@ -3,15 +3,19 @@
 #############Process 1###########
 
 ##### for any fasta file
-####Checar sintaxis para pair-end cambia si se procesan aparte o solo es para  tener ambos pares en un archivo?####
+#!!!!!!!IMPORANTE PROCESAR COMO PAIR-END para evitar fastq con difernte numero de secuencias!!!!!!!!#
 
 RUTA='/hd1/amartinsan/MetaINFER/MetabolicProfile_Inferring/Process'
 
 #for file in $RUTA/*.fastq
 for file in *.fastq
 do
+        fastq=$file
+        #get R2 from R1 (derive)
+        fastq2="${fastq/R1/R2}"
 
-	fastp -i $file -o Qual$file \
+
+	fastp -i $fastq -I $fastq2 -o out.$fastq -O out.$fastq2 \
  		-V \
  		-q 17 \
  		-g --poly_g_min_len=10 \
@@ -26,18 +30,19 @@ do
 done
 
 #Filter f duplicate sequences, PCR product or optical duplicates.
-for file in Qual*
+#WE NEED cd-hit-dup for pair end data
+for file in out*
 do
 
-	cd-hit -i $file -o nodup-$file -c 1.00 -T 5
+	cd-hit -i $file -o CD-$file -c 1.00 -T 5
 
 done
 
 mkdir quality
 mv *json quality/
 mv *html quality/
+mv *.fastq quality/
+mv quality/CD-* .
 mv *clstr quality/
-mv Qual* quality/
-
 
 #Final
