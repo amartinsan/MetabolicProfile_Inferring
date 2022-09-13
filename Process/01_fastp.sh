@@ -1,11 +1,6 @@
 #!/bin/bash
-
-
-
-
-
 #Quality check and filter to sample fasta
-#Process 1
+#############Process 1###########
 
 ##### for any fasta file
 ####Checar sintaxis para pair-end cambia si se procesan aparte o solo es para  tener ambos pares en un archivo?####
@@ -16,7 +11,7 @@ RUTA='/hd1/amartinsan/MetaINFER/MetabolicProfile_Inferring/Process'
 for file in *.fastq
 do
 
-	fastp -i $file -o $file\_out.fastq \
+	fastp -i $file -o Qual$file \
  		-V \
  		-q 17 \
  		-g --poly_g_min_len=10 \
@@ -31,16 +26,18 @@ do
 done
 
 #Filter f duplicate sequences, PCR product or optical duplicates.
-for file in *_out.fastq
+for file in Qual*
 do
 
-	cd-hit -i $file -o noDUP-$file -c 1.00 -T 5
+	cd-hit -i $file -o nodup-$file -c 1.00 -T 5
 
 done
 
 mkdir quality
-mv Sample_soil_R* quality/
+mv *json quality/
+mv *html quality/
 mv *clstr quality/
+mv Qual* quality/
 
 
 #Final
