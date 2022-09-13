@@ -6,7 +6,7 @@
 
 
 
-for file in *.fastq
+for file in *R1.fastq
 do
 
 	echo $file
@@ -18,6 +18,6 @@ do
 
 	#Assembly
 
-	spades.py --meta -1 $fastq -2 $fastq2 -o $fastq.spades  -t $NSLOTS -m 250 -k 21,33,55,77,99,111,127 --only-assembler
+	spades.py --meta -1 $fastq -2 $fastq2 -o spadesFld$file  -t $NSLOTS -m 250 -k 21,33,55,77,99,111,127 --only-assembler
 
 done
