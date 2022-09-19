@@ -21,8 +21,6 @@ do
 	#CDHIT-EST for redundancy filter
 
 	cd-hit-est -i $file\_SPADES_ASSEMBLY/contigs.fasta -o $file\_SPADES_ASSEMBLY/contigsCDHIT.fasta -c 0.9 -M 50000 -aS 0.9 -G 0 -l 100 -p 1 -g 1 -T 5
-
-
 	#MetaQuast for  quality evaluation
 	#Contigs
 	metaquast.py $file\_SPADES_ASSEMBLY/contigs.fasta -o $file\_contigsQuast -t 5
