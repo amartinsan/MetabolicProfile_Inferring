@@ -8,10 +8,17 @@
 
 for file in *R1.fastq
 do
+
+        NSLOTS=5
+        fastq=$file
+        #get R2 from R1 (derive)
+        fastq2="${fastq/R1/R2}"
+
+
 	cd $file\_SPADES_ASSEMBLY
 
-	bwa index contigs.fasta -p bwa-
-	bwa mem bwa- ../out.Sample_soil_R1.fastq ../out.Sample_soil_R2.fastq > output.sam
+	bwa index contigsCDHIT.fasta -p bwa-
+	bwa mem bwa- ../$file ../$file2 > output.sam
 	samtools sort output.sam -o output.bam
 	samtools index  output.bam
 	#Make depth file
