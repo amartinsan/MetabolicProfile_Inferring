@@ -2,27 +2,30 @@
 #!/usr/bin/bash
 
 
-PATH=/hd1/msanchez/Programas/mmseqs/bin/
 
-DB=_DB
-CLU=_clu
-SEQ=_seq
-FAS=.fasta
-GEN=_genes
+
+DB=DB
+CLU=clu
+SEQ=seq
+FAS=fasta
+GEN=genes
 
 for file in *R1.fastq
 do
 
+RUTA=/hd1/msanchez/Programas/mmseqs/bin/
+
 
 
 	cd $file\_SPADES_ASSEMBLY/prodigal
+	pwd=$(pwd)
 
-	$PATH/mmseqs createdb protein_spades.fasta $file\_$DB
-	$PATH/mmseqs cluster $file\_$DB $file\_$DB$CLU  -c 0.95 --min-seq-id 0.95 --cov-mode 1 --cluster-mode 2 tmp --threads 5
-	$PATH/mmseqs createseqfiledb  $file\_$DB $file\_$DB$CLU $file\_$DB$CLU$SEQ
-	$PATH/ result2flat $file\_$DB $file\_$DB $file\_$DB$CLU$SEQ $file\_$DB$CLU$SEQ$FAS
+	$RUTA/mmseqs createdb protein_spades.fasta $pwd/$file\_$DB
+	$RUTA/mmseqs cluster $file\_$DB $file\_$DB\_$CLU  -c 0.95 --min-seq-id 0.95 --cov-mode 1 --cluster-mode 2 tmp --threads 5
+	$RUTA/mmseqs createseqfiledb  $file\_$DB $file\_$DB\_$CLU $file\_$DB\_$CLU\_$SEQ
+	$RUTA/mmseqs result2flat $file\_$DB $file\_$DB $file\_$DB\_$CLU\_$SEQ $file\_$DB\_$CLU\_$SEQ\.$FAS
 	rm -r tmp
-	emapper.py --cpu 5 --data_dir /data/databases/eggnog_db -i $file\_$DB$CLU$SEQ$FAS --itype CDS -o $file\_$DB$CLU$SEQ$FAS$GEN
+	emapper.py --cpu 10 --data_dir /data/databases/eggnog_db -i $file\_$DB\_$CLU\_$SEQ\.$FAS --itype proteins -o $file\_$DB\_$CLU\_$SEQ\.$FAS\_$GEN
 
 
 done
