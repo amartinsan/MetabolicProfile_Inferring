@@ -5,7 +5,7 @@
 ##### for any fasta file
 #!!!!!!!IMPORANTE PROCESAR COMO PAIR-END para evitar fastq con difernte numero de secuencias!!!!!!!!#
 
-RUTA='/hd1/amartinsan/MetaINFER/MetabolicProfile_Inferring/Process'
+#RUTA='/hd1/amartinsan/MetaINFER/MetabolicProfile_Inferring/Process'
 
 #for file in $RUTA/*.fastq
 for file in *.fastq
@@ -43,7 +43,7 @@ mv *json quality/
 mv *html quality/
 mv *.fastq quality/
 #mv quality/CD-* .
-mv *clstr quality/
+#mv *clstr quality/
 mv quality/Q_* .
 
 #Final
