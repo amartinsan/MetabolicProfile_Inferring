@@ -2,10 +2,10 @@
 
 FROM continuumio/miniconda
 
-#INSTALL fastp, mehagit, diamond and conda programs
+#UPDATE IF REQUIRED
+# RUN conda update -n base -c defaults conda --yes
 
-RUN conda install -c bioconda fastp --yes
-RUN conda install -c bioconda megahit --yes
+RUN conda insRUN conda install -c "bioconda/label/main" fastp --YES
 RUN conda install -c bioconda spades --yes
 RUN conda install -c bioconda cd-hit --yes
 RUN conda install -c bioconda quast --yes 
@@ -15,6 +15,7 @@ RUN conda install -c bioconda metabat2 --yes
 RUN conda install -c bioconda prodigal --yes
 RUN conda install -c bioconda mmseqs2 --yes
 RUN conda install -c bioconda eggnog-mapper
+RUN conda update -n base -c defaults conda --yes
 
 #Extras and outside of conda
 
