@@ -8,11 +8,11 @@
 #RUTA='/hd1/amartinsan/MetaINFER/MetabolicProfile_Inferring/Process'
 
 #for file in $RUTA/*.fastq
-for file in *.fastq
+for file in *1.fastq
 do
         fastq=$file
         #get R2 from R1 (derive)
-        fastq2="${fastq/R1/R2}"
+        fastq2="${fastq/_1/_2}"
 
 
 	fastp -i $fastq -I $fastq2 -o Q_$fastq -O Q_$fastq2 \
