@@ -5,6 +5,19 @@ Make a dokcer container with all programs.
 
 And both nextflow main.nf and nextflow.config.
 
+
+## General idea
+
+### Quality assesment
+
+Instead of fastqc/multiqc and trimmomatic, the idea is to use fastp to filter low quality reads from pair end data.
+
+Also a CD-HIT-DUP pass can be implemented to futher filter, althought it is very time consuming and not always recommended. 
+
+-  [01_fastp.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/01_fastp.sh)
+ 
+
+
 ## Workflow diagram
 
 
