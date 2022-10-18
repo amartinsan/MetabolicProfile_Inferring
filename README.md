@@ -15,7 +15,28 @@ Instead of fastqc/multiqc and trimmomatic, the idea is to use fastp to filter lo
 Also a CD-HIT-DUP pass can be implemented to futher filter, althought it is very time consuming and not always recommended. 
 
 -  [01_fastp.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/01_fastp.sh)
+
+ ##### output :
  
+ - Quality proceessed seqs ("Q_" prefix)
+
+- quality folder with orignal seqs and .json  and .html outputs of fastqc
+
+### Assembly
+
+Mestaspades or megagit assembly, followed by metaQuast ond contigs and scaffolds.
+
+Also a cd-hit-est pass can be done, althought it takes a good ammount of time.
+
+#### output:
+
+-Directory /s with Q_"SAMPLE NAME"_SPADES_ASSEMBLY or_MEHAGIT_ASSEMBLY
+
+-Two directories: contigs_Quast_"Q_SAMPLE_NAME" and scaffoldQUAST_"Q_SAMPLE_NAME" 
+
+### Binning
+
+
 
 
 ## Workflow diagram
