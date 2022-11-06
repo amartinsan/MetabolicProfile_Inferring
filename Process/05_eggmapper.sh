@@ -21,5 +21,11 @@ RUTA=/hd1/msanchez/Programas/mmseqs/bin/
 	$RUTA/mmseqs result2flat $file\_$DB $file\_$DB $file\_$DB\_$CLU\_$SEQ $file\_$DB\_$CLU\_$SEQ\.$FAS
 	rm -r tmp
 	emapper.py --cpu 10 --data_dir /data/databases/eggnog_db -i $file\_$DB\_$CLU\_$SEQ\.$FAS --itype proteins -o $file\_$DB\_$CLU\_$SEQ\.$FAS\_$GEN
+	
+	#move files for easier search
+	
+	mkdir emmaperRESULTS
+	mv  $file\_$DB\_$CLU\_$SEQ\.$FAS\_$GEN emmaperRESULTS/
+	
 
 done
