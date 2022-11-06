@@ -47,6 +47,15 @@ For gene predicition, functional annotatino or pipeline manager
 -	Docker https://www.docker.com/
 -	Nextflow  https://www.nextflow.io/
 
+## Blastp with  Swissprot database
+
+ Download : https://www.uniprot.org/help/downloads
+ 
+ 
+ Command for protein_spades.fasta (output of assembly and prodigal).
+ 
+       blastp -query protein_spades.fasta  -db uniprot_sprot.pep  -num_threads $THREADS   -outfmt 6 > blastp.outfmt6
+
 
 ## Docker for reproducibility
 
