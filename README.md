@@ -1,17 +1,9 @@
 
-## Generate a pipeline to proceess metagenome samples 
-
-Make a dokcer container with all programs.
-
-And both nextflow main.nf and nextflow.config.
-
+## A pipeline to proceess metagenome samples 
 
 ## Workflow diagram
 
-
 ![Plot](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/workflow.png)
-
-
 
 # List of program  needed
 
@@ -54,6 +46,26 @@ For gene predicition, functional annotatino or pipeline manager
 -	trinnotate https://github.com/Trinotate/Trinotate.github.io/wiki
 -	Docker https://www.docker.com/
 -	Nextflow  https://www.nextflow.io/
+
+
+## Docker for reproducibility
+
+The Dockerfile for making a container
+
+#### example
+
+      docker build -t my_dockerpipeline my_FOLDER/
+      
+for using the docker you have to use a docker share folder 
+
+     mkdir $PATH/dockershare
+     cd $PATH/dockershare       
+
+
+Run docker example 
+
+      cd $HOME/dockershare
+      docker run -it --rm -v $PATH/dockershare:/data  -i /data/"FOLDER WITH SAMPLPES" -o /data/"FOLDER WITH SAMPLES"
 
 
 ## General idea
