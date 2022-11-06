@@ -11,6 +11,8 @@ do
 
 	cd $file\_SPADES_ASSEMBLY
 	
+	#cd $file\_MEGA_ASSEMBLY
+	
 	bowtie2-build scaffolds.fasta scaffolds.fasta.index 
 	bowtie2 --very-sensitive -t --sam-no-qname-trunc -x scaffolds.fasta.index -1 ../$file -2 ../$file2 -S scaffolds.sam --threads 15
 	samtools view -bS scaffolds.sam -o scaffolds.bam
@@ -26,7 +28,8 @@ do
 	#runMetaBat.sh -m 1500 contigs.fasta contigs.sort.bam -o bins
 	
 	#CHECKM
-	#checkm lineage_wf bins -x .fa checkm_bins
+	
+	checkm lineage_wf bins -x .fa checkm_bins
 
 done
 
