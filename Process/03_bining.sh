@@ -29,7 +29,7 @@ do
 	
 	#CHECKM
 	
-	checkm lineage_wf bins -x .fa checkm_bins
+	checkm lineage_wf binning -x .fa checkm_bins
 
 done
 
