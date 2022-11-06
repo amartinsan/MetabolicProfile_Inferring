@@ -18,25 +18,65 @@ Also a CD-HIT-DUP pass can be implemented to futher filter, althought it is very
 
  ##### output :
  
- - Quality proceessed seqs ("Q_" prefix)
+ - Quality proceessed seqs with a "Q_" prefix 
 
-- quality folder with orignal seqs and .json  and .html outputs of fastqc
+- quality folder with orignal seqs and .json  and .html outputs of fastqc quality metrics
 
 ### Assembly
 
 Mestaspades or megagit assembly, followed by metaQuast ond contigs and scaffolds.
 
-Also a cd-hit-est pass can be done, althought it takes a good ammount of time.
+Also a cd-hit-est pass can be done, althought it takes a good ammount of time (not recomended).
+
+- [02_assembly.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/02_assembly.sh)
+
 
 #### output:
 
--Directory /s with Q_"SAMPLE NAME"_SPADES_ASSEMBLY or_MEHAGIT_ASSEMBLY
+- Directory named : Q_"SAMPLE NAME"_SPADES_ASSEMBLY or_MEHAGIT_ASSEMBLY 
+ 
+ It contains the assembly results.
 
--Two directories: contigs_Quast_"Q_SAMPLE_NAME" and scaffoldQUAST_"Q_SAMPLE_NAME" 
+- Directory named: contigs_Quast_"Q_SAMPLE_NAME" 
+
+It contains the metrics of MetaQuast for the assembly.
 
 ### Binning
 
+Taking the output of the assembly (scaffolds) and uses bowtie2 to generate the index, .sam and .bam files necessary for the binning with metabat.
 
+Also it uses checkm to check the quality of the bins. 
+
+- [03_bining.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/03_bining.sh)
+
+
+#### output:
+
+##### All the results are inside the assembly folder.
+
+- bowtieINDEX folder with bowtie results.
+
+- scaffolds.sort.bam (and sam) and stats.
+
+- bins folder with assembled bins.
+
+### Gene prediction 
+
+Using the contigs.fasta file from the assembly and the program Prodigal.
+
+- [04_prodigal.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/04_prodigal.sh)
+
+#### output:
+
+##### All the results are inside the assembly folder.
+
+- prodigal folder with the predicted proteins and genes.
+
+### Functional assingment 
+
+This it where it gets tricky, depending on the program and database used.
+
+Here we are using mmseq2 with eggNOG emapper. It uses the protein_spades.fasta file from the Prodigal prediction
 
 
 ## Workflow diagram
