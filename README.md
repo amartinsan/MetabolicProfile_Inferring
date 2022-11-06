@@ -56,6 +56,15 @@ For gene predicition, functional annotatino or pipeline manager
  
        blastp -query protein_spades.fasta  -db uniprot_sprot.pep  -num_threads $THREADS   -out swissblast.fasta
 
+### Can be done useing DIAMOND with KEGG or other DB and HMMER alingment also
+
+For diamond the chosen database has to be in a reference format
+
+        /diamond makedb --in reference.fastaCHOSEN-DATABASE -d reference
+        # running a search in blastp mode
+        ./diamond blastp -d reference -q queries.fasta -o matches.tsv
+
+For hmmer the database has to be in a profile form 
 
 ## Docker for reproducibility
 
