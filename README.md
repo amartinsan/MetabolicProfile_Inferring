@@ -54,7 +54,7 @@ For gene predicition, functional annotatino or pipeline manager
  
  Command for protein_spades.fasta (output of assembly and prodigal).
  
-       blastp -query protein_spades.fasta  -db uniprot_sprot.pep  -num_threads $THREADS   -outfmt 6 > blastp.outfmt6
+       blastp -query protein_spades.fasta  -db uniprot_sprot.pep  -num_threads $THREADS   -out swissblast.fasta
 
 
 ## Docker for reproducibility
