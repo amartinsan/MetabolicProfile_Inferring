@@ -19,7 +19,7 @@ do
 	samtools sort scaffolds.bam -o  scaffolds.sort.bam
 	samtools index scaffolds.sort.bam
 	#Get stats
-	samtools idxstats  contigs.sort.bam > contigs.sort_STATS.txt
+	samtools idxstats  scaffolds.sort.bam > scaffolds.sort_STATS.txt
 	#move or delete intermediate files
 	mkdir bowtieINDEX
 	mv *.bt2 bowtieINDEX/
@@ -29,7 +29,7 @@ do
 	
 	#CHECKM
 	
-	checkm lineage_wf binning -x .fa checkm_bins
+	checkm lineage_wf bins -x .fa checkm_bins
 
 done
 
