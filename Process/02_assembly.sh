@@ -23,6 +23,6 @@ do
 	metaquast.py $file\_SPADES_ASSEMBLY/scaffolds.fasta -o scaffoldQUAST_$file\_FOLDER -t 5
 	
 	#MEGAHIT ASSEMBLY make option in nextflow
-	megahit -1 $fastq -2 $fastq2 -t 5 --k-list 21,33,55,77,99,111,127 -o $file\_MEGA_ASSEMBLY
+	#megahit -1 $fastq -2 $fastq2 -t 5 --k-list 21,33,55,77,99,111,127 -o $file\_MEGA_ASSEMBLY
 
 done
