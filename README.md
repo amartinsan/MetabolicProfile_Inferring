@@ -163,9 +163,14 @@ Here we are using mmseq2 with eggNOG emapper. It uses the protein_spades.fasta f
 ###############################################################
 
 
- ## Este proyecto ha sido financiado por CONACyt en su Convocatoria de Ciencia Básica y/o Ciencia de Frontera. 
+## Support and Finance
+
+
+
+
+ ### Este proyecto ha sido financiado por CONACyt en su Convocatoria de Ciencia Básica y/o Ciencia de Frontera. 
  
- ## Modalidad: Paradigmas y Controversias de la Ciencia 2022 
+ ### Modalidad: Paradigmas y Controversias de la Ciencia 2022 
  
- ## Proyecto 319234 otorgado a la Dra. Rosa María Gutierrez Ríos.
+ ### Proyecto 319234 otorgado a la Dra. Rosa María Gutierrez Ríos.
 
