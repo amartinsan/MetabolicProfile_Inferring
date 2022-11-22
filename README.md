@@ -159,3 +159,13 @@ This it where it gets tricky, depending on the program and database used.
 Here we are using mmseq2 with eggNOG emapper. It uses the protein_spades.fasta file from the Prodigal prediction
 
 - [05_eggmapper.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/05_eggmapper.sh)
+
+###############################################################
+
+
+ ## Este proyecto ha sido financiado por CONACyt en su Convocatoria de Ciencia Básica y/o Ciencia de Frontera. 
+ 
+ ## Modalidad: Paradigmas y Controversias de la Ciencia 2022 
+ 
+ ## Proyecto 319234 otorgado a la Dra. Rosa María Gutierrez Ríos.
+
