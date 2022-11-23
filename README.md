@@ -167,12 +167,14 @@ For diamond the chosen database has to be in a reference format
         
         ./diamond blastp -d referenceDB -q protein_spades.fasta -o matches.tsv
 
-### Hmmer of the obteined fasta
+### Hmmer of the obtained fasta
 
 Firs the db has to be ini a profile form (recommended uniprot or interpro)
 
         hmmaling --amino hmmer_profileDATABASE proteins_spades.fasta 
 
+
+- [Extra_FuncAssingment.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/Extra_FuncAssingment.sh)
 
 
 ###############################################################
