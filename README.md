@@ -171,7 +171,7 @@ For diamond the chosen database has to be in a reference format
 
 Firs the db has to be ini a profile form (recommended uniprot or interpro)
 
-        hmmaling --amino HMMMERPROFILE proteins_spades.fasta 
+        hmmaling --amino hmmer_profileDATABASE proteins_spades.fasta 
 
 
 
