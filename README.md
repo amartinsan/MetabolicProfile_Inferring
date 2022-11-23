@@ -47,25 +47,6 @@ For gene predicition, functional annotatino or pipeline manager
 -	Docker https://www.docker.com/
 -	Nextflow  https://www.nextflow.io/
 
-## Blastp with  Swissprot database
-
- Download : https://www.uniprot.org/help/downloads
- 
- 
- Command for protein_spades.fasta (output of assembly and prodigal).
- 
-       blastp -query protein_spades.fasta  -db uniprot_sprot.pep  -num_threads $THREADS   -out swissblast.fasta
-
-### Can be done useing DIAMOND with KEGG or other DB and HMMER alingment also
-
-For diamond the chosen database has to be in a reference format
-
-        /diamond makedb --in reference.fastaCHOSEN-DATABASE -d reference
-        # running a search in blastp mode
-        ./diamond blastp -d reference -q queries.fasta -o matches.tsv
-
-For hmmer the database has to be in a profile form 
-
 ## Docker for reproducibility
 
 The Dockerfile for making a container
@@ -160,13 +141,46 @@ Here we are using mmseq2 with eggNOG emapper. It uses the protein_spades.fasta f
 
 - [05_eggmapper.sh](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Process/05_eggmapper.sh)
 
+
+## Other functional assingment strategies
+
+As always, getting the databes is the issue
+ 
+ 
+#### Blastp against Swiisprot (uniprot) 
+
+
+ Download : https://www.uniprot.org/help/downloads
+ 
+A regular blastp of the obtained protein_spades.fasta of the assembly.
+
+ 
+       blastp -query protein_spades.fasta  -db uniprot_sprot.pep  -num_threads $THREADS   -out swissblast.fasta
+       
+       
+ ### Diamond alingment with KEGG db
+
+For diamond the chosen database has to be in a reference format
+
+        /diamond makedb --in reference.fastaCHOSEN-DATABASE -d reference
+        # running a search in blastp mode
+        ./diamond blastp -d reference -q protein_spades -o matches.tsv
+
+For hmmer the database has to be in a profile form 
+
 ###############################################################
 
 
 ## Support and Finance
 
+ ### This project has been funded by CONACyt in its Basic Science and/or Frontier Science convening. 
+ 
+ ### Modality: Paradigms and Controversies of Science 2022 
+ 
+ ### Project 319234 awarded to Dr. Rosa María Gutierrez Ríos.
 
 
+#################################################################
 
  ### Este proyecto ha sido financiado por CONACyt en su Convocatoria de Ciencia Básica y/o Ciencia de Frontera. 
  
