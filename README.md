@@ -5,9 +5,8 @@
 
 ![Plot](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/workflow.png)
 
-# List of program  needed
+# List of programs needed
 
-Half the battle is having the right tools
 
 ## Quality and filter
 
@@ -162,11 +161,19 @@ A regular blastp of the obtained protein_spades.fasta of the assembly.
 
 For diamond the chosen database has to be in a reference format
 
-        /diamond makedb --in reference.fastaCHOSEN-DATABASE -d reference
+        /diamond makedb --in reference.fastaCHOSEN-DATABASE -d referenceDB
+        
         # running a search in blastp mode
-        ./diamond blastp -d reference -q protein_spades -o matches.tsv
+        
+        ./diamond blastp -d referenceDB -q protein_spades.fasta -o matches.tsv
 
-For hmmer the database has to be in a profile form 
+### Hmmer of the obteined fasta
+
+Firs the db has to be ini a profile form (recommended uniprot or interpro)
+
+        hmmaling --amino HMMMERPROFILE proteins_spades.fasta 
+
+
 
 ###############################################################
 
