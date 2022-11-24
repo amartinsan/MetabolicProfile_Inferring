@@ -44,7 +44,7 @@ RUN conda update -n base -c defaults conda --yes
 
 RUN conda install -c bioconda blast --yes
 RUN conda install -c bioconda diamond --yes
-RUN conda install -c bioconda hmmer --yyes
+RUN conda install -c bioconda hmmer --yes
 #EXTRAS for testing not necessarily used in the original pipeline
 
 #RUN conda install -c bioconda trinotate --yes
