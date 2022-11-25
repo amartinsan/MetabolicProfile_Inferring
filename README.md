@@ -1,5 +1,5 @@
 
-## A pipeline to proceess metagenome samples 
+## A pipeline to process metagenome samples 
 
 ## Workflow diagram
 
