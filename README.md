@@ -48,7 +48,9 @@ For gene predicition, functional annotatino or pipeline manager
 
 ## Docker for reproducibility
 
-The Dockerfile for making a container
+The Dockerfile for making a container:
+
+- [Dockerfile](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/dockerpipeline/Dockerfile)
 
 #### example
 
@@ -64,6 +66,11 @@ Run docker example
 
       cd $HOME/dockershare
       docker run -it --rm -v $PATH/dockershare:/data  -i /data/"FOLDER WITH SAMPLPES" -o /data/"FOLDER WITH SAMPLES"
+
+
+### Also the container is already ready for download form dockerhub
+
+https://hub.docker.com/r/amartinsan/metagenompipeline
 
 
 ## General idea
