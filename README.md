@@ -38,13 +38,13 @@
 
 ## Extras
 
-For gene predicition, functional annotatino or pipeline manager
+For gene predicition, functional annotation or pipeline manager
 
 -	prodigal https://github.com/hyattpd/Prodigal
 -	orfm https://github.com/wwood/OrfM
 -	trinnotate https://github.com/Trinotate/Trinotate.github.io/wiki
--	Docker https://www.docker.com/
--	Nextflow  https://www.nextflow.io/
+-	Docker https://www.docker.com/ (already in container)
+-	Nextflow  https://www.nextflow.io/ (Managing data flow)
 
 ## Docker for reproducibility
 
