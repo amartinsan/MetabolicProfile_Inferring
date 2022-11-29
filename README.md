@@ -68,7 +68,7 @@ Run docker example
       docker run -it --rm -v $PATH/dockershare:/data  -i /data/"FOLDER WITH SAMPLPES" -o /data/"FOLDER WITH SAMPLES"
 
 
-### Also the container is already ready for download form dockerhub
+### Also the container is already ready for download from dockerhub
 
 https://hub.docker.com/r/amartinsan/metagenompipeline
 
