@@ -73,6 +73,10 @@ Run docker example
 https://hub.docker.com/r/amartinsan/metagenompipeline
 
 
+      #You can pull de image from dockerhub, REMEMBER to specifty version or tag (1.0 in this case)
+      
+       docker pull amartinsan/metagenompipeline:1.0
+
 ## General idea
 
 ### Quality assesment
