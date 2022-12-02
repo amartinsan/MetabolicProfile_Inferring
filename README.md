@@ -3,7 +3,7 @@
 
 ## Workflow diagram
 
-![Plot](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/workflow.png)
+![Plot](https://github.com/amartinsan/MetabolicProfile_Inferring/blob/main/Untitled%20Diagram.drawio.png)
 
 # List of programs needed
 
