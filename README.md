@@ -66,6 +66,8 @@ Run docker example
 
       cd $HOME/dockershare
       docker run -it --rm -v $PATH/dockershare:/data  -i /data/"FOLDER WITH SAMPLPES" -o /data/"FOLDER WITH SAMPLES"
+      #Check for installed image
+      docker images
 
 
 ### Also the container is already ready for download from dockerhub
