@@ -195,7 +195,7 @@ Firs the db has to be ini a profile form (recommended uniprot or interpro)
 
 ## Support and Finance
 
- ### This project has been funded by CONACyt in its Basic Science and/or Frontier Science convening. 
+ ### This project has been funded by CONACyT in its Basic Science and/or Frontier Science convening. 
  
  ### Modality: Paradigms and Controversies of Science 2022 
  
@@ -204,7 +204,7 @@ Firs the db has to be ini a profile form (recommended uniprot or interpro)
 
 #################################################################
 
- ### Este proyecto ha sido financiado por CONACyt en su Convocatoria de Ciencia Básica y/o Ciencia de Frontera. 
+ ### Este proyecto ha sido financiado por CONACyT en su Convocatoria de Ciencia Básica y/o Ciencia de Frontera. 
  
  ### Modalidad: Paradigmas y Controversias de la Ciencia 2022 
  
