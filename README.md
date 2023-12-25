@@ -199,7 +199,7 @@ Firs the db has to be ini a profile form (recommended uniprot or interpro)
  
  ### Modality: Paradigms and Controversies of Science 2022 
  
- ### Project 319234 awarded to Dr. [Rosa María Gutierrez Ríos](ttps://www.ibt.unam.mx/perfil/2126/dra-rosa-maria-gutierrez-rios)
+ ### Project 319234 awarded to [Dr. Rosa María Gutierrez Ríos](https://www.ibt.unam.mx/perfil/2126/dra-rosa-maria-gutierrez-rios)
 
 
 #################################################################
@@ -208,7 +208,7 @@ Firs the db has to be ini a profile form (recommended uniprot or interpro)
  
  ### Modalidad: Paradigmas y Controversias de la Ciencia 2022 
  
- ### Proyecto 319234 otorgado a la Dra. [Rosa María Gutierrez Ríos](ttps://www.ibt.unam.mx/perfil/2126/dra-rosa-maria-gutierrez-rios)
+ ### Proyecto 319234 otorgado a la [Dra. Rosa María Gutierrez Ríos](https://www.ibt.unam.mx/perfil/2126/dra-rosa-maria-gutierrez-rios)
  
      
 
